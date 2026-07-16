@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
 
 <meta charset="UTF-8">
@@ -7,84 +8,129 @@
 
 <title>NMS REFINER</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
+<!-- 背景 -->
+<div id="background"></div>
+
+<!-- 起動画面 -->
+
 <div id="boot">
 
-    <div class="boot-title">
+    <div class="bootLogo">
+
         ATLAS INTERFACE
+
     </div>
 
     <div id="bootText">
+
         INITIALIZING...
+
     </div>
 
     <div class="progress">
 
-        <div id="bar"></div>
+        <div id="progressBar"></div>
 
     </div>
 
 </div>
 
+<!-- メイン画面 -->
 
 <div id="main">
 
-<div class="topbar">
+<header>
 
-<span>ATLAS NETWORK</span>
+<div class="statusLeft">
 
-<span class="online">ONLINE</span>
-
-</div>
-
-
-<div class="container">
-
-<h1>NMS REFINER</h1>
-
-<div class="subtitle">
-
-Refining Database
+ATLAS NETWORK
 
 </div>
 
-<div class="line"></div>
+<div class="statusRight">
 
-<div class="search-title">
+ONLINE
 
-▶ SEARCH RESOURCE
+</div>
+
+</header>
+
+<main>
+
+<div class="titleArea">
+
+<div class="titleLine"></div>
+
+<h1>
+
+NMS REFINER
+
+</h1>
+
+<div class="titleLine"></div>
+
+</div>
+
+<p class="subtitle">
+
+REFINING DATABASE
+
+</p>
+
+<section class="searchArea">
+
+<div class="searchLabel">
+
+RESOURCE INPUT
 
 </div>
 
 <input
+id="searchBox"
 type="text"
-placeholder="資源名を入力..."
->
+placeholder="資源名を入力">
 
-<div class="line"></div>
+</section>
 
-<div class="welcome">
+<section class="welcome">
 
 WELCOME TRAVELLER
 
+</section>
+
+</main>
+
+<footer>
+
+<div>
+
+DATABASE READY
+
 </div>
 
-<div class="version">
+<div>
 
-REFINER DATABASE　Ver.0.2
-
-</div>
+VERSION 0.3
 
 </div>
+
+</footer>
 
 </div>
 
 <script src="script.js"></script>
 
 </body>
+
 </html>
