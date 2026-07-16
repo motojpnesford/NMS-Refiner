@@ -70,10 +70,19 @@ body::after{
     position:fixed;
     inset:0;
 
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(0,0,0,.90);
+
     z-index:100;
 
 }
-
 .bootLogo{
 
     color:#ff4040;
