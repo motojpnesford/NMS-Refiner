@@ -1,218 +1,378 @@
-body{
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-margin:0;
+html,body{
 
-background-color:#050505;
-background-image:url("background.png");
-background-size:cover;
-background-position:center;
-background-repeat:no-repeat;
-background-attachment:fixed;
+    width:100%;
+    height:100%;
 
-color:white;
+    background:#050505;
+    color:#ffffff;
 
-font-family:Arial,Helvetica,sans-serif;
-
-overflow:hidden;
+    font-family:'Orbitron',sans-serif;
 
 }
+
+/* ===========================
+   背景
+=========================== */
+
+#background{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background-image:url("background.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    opacity:.12;
+
+    z-index:-3;
+
+}
+
+/* スキャンライン */
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:repeating-linear-gradient(
+        to bottom,
+        rgba(255,255,255,.02) 0px,
+        rgba(255,255,255,.02) 1px,
+        transparent 2px,
+        transparent 4px
+    );
+
+    pointer-events:none;
+
+    z-index:-2;
+
+}
+
+/* ===========================
+   起動画面
+=========================== */
 
 #boot{
 
-position:absolute;
+    position:fixed;
 
-top:0;
-left:0;
+    inset:0;
 
-width:100%;
-height:100%;
+    display:flex;
 
-display:flex;
+    flex-direction:column;
 
-flex-direction:column;
+    justify-content:center;
 
-justify-content:center;
+    align-items:center;
 
-align-items:center;
+    background:rgba(0,0,0,.90);
 
-background:#050505;
+    z-index:999;
 
 }
 
-.boot-title{
+.bootLogo{
 
-color:#ff4040;
+    color:#ff4040;
 
-font-size:34px;
+    font-size:34px;
 
-letter-spacing:6px;
+    letter-spacing:8px;
 
-margin-bottom:30px;
+    margin-bottom:40px;
+
+    text-shadow:0 0 12px rgba(255,80,80,.6);
 
 }
 
 #bootText{
 
-color:#dddddd;
+    color:#dddddd;
 
-margin-bottom:20px;
+    letter-spacing:3px;
 
-letter-spacing:2px;
+    margin-bottom:20px;
 
 }
 
 .progress{
 
-width:280px;
+    width:300px;
 
-height:12px;
+    height:8px;
 
-border:1px solid #aa0000;
+    border:1px solid #aa2222;
+
+}
+
+#progressBar{
+
+    width:0;
+
+    height:100%;
+
+    background:#ff4040;
 
 }
 
-#bar{
-
-height:100%;
-
-width:0%;
-
-background:#cc0000;
-
-transition:0.4s;
-
-}
+/* ===========================
+   メイン画面
+=========================== */
 
 #main{
 
-display:none;
+    display:none;
+
+    min-height:100vh;
 
 }
 
-.topbar{
+/* ===========================
+   上部バー
+=========================== */
 
-display:flex;
+header{
 
-justify-content:space-between;
+    display:flex;
 
-padding:15px 20px;
+    justify-content:space-between;
 
-font-size:14px;
+    padding:18px 35px;
 
-border-bottom:1px solid #550000;
+    border-bottom:1px solid rgba(255,70,70,.25);
 
-color:#bbbbbb;
+    color:#aaaaaa;
+
+    font-size:.9rem;
+
+    letter-spacing:2px;
 
 }
 
-.online{
+.statusRight{
 
-color:#3dd6ff;
+    color:#58d9ff;
 
 }
 
-.container{
+/* ===========================
+   中央
+=========================== */
 
-max-width:500px;
+main{
 
-margin:60px auto;
+    width:min(900px,92%);
 
-padding:20px;
+    margin:auto;
+
+    padding-top:80px;
+
+}
+
+/* タイトル */
+
+.titleArea{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    margin-bottom:10px;
+
+}
+
+.titleLine{
+
+    flex:1;
+
+    height:1px;
+
+    background:#8a1f1f;
+
+    box-shadow:0 0 12px rgba(255,0,0,.45);
 
 }
 
 h1{
 
-text-align:center;
+    font-size:3rem;
 
-letter-spacing:8px;
+    color:#ff5252;
 
-color:#ff4444;
+    letter-spacing:8px;
 
-font-size:42px;
-
-margin-bottom:5px;
+    text-shadow:
+        0 0 10px rgba(255,0,0,.4),
+        0 0 20px rgba(255,0,0,.2);
 
 }
 
 .subtitle{
 
-text-align:center;
+    text-align:center;
 
-color:#999;
+    color:#9d9d9d;
 
-margin-bottom:35px;
+    letter-spacing:4px;
 
-}
-
-.line{
-
-height:1px;
-
-background:#661111;
-
-margin:30px 0;
+    margin-bottom:80px;
 
 }
 
-.search-title{
+/* ===========================
+   検索
+=========================== */
 
-color:#ff6666;
+.searchArea{
 
-margin-bottom:15px;
+    width:min(650px,100%);
 
-letter-spacing:2px;
-
-}
-
-input{
-
-width:100%;
-
-padding:15px;
-
-background:#111;
-
-border:1px solid #772222;
-
-color:white;
-
-font-size:18px;
-
-box-sizing:border-box;
+    margin:auto;
 
 }
 
-input:focus{
+.searchLabel{
 
-outline:none;
+    color:#ff7070;
 
-border:1px solid #ff4444;
+    margin-bottom:12px;
 
-box-shadow:0 0 15px #aa0000;
+    letter-spacing:3px;
 
 }
+
+#searchBox{
+
+    width:100%;
+
+    background:transparent;
+
+    border:none;
+
+    border-bottom:2px solid rgba(255,70,70,.5);
+
+    color:white;
+
+    padding:12px 4px;
+
+    font-size:1.2rem;
+
+    font-family:'Orbitron',sans-serif;
+
+}
+
+#searchBox::placeholder{
+
+    color:#666;
+
+}
+
+#searchBox:focus{
+
+    outline:none;
+
+    border-bottom:2px solid #ff4444;
+
+    box-shadow:0 10px 20px -15px rgba(255,0,0,.8);
+
+}
+
+/* ===========================
+   Welcome
+=========================== */
 
 .welcome{
 
-text-align:center;
+    text-align:center;
 
-margin-top:35px;
+    margin-top:100px;
 
-color:#dddddd;
+    color:#dddddd;
 
-letter-spacing:3px;
+    letter-spacing:6px;
+
+    font-size:1.1rem;
 
 }
 
-.version{
+/* ===========================
+   下部
+=========================== */
 
-margin-top:50px;
+footer{
 
-text-align:center;
+    position:fixed;
 
-font-size:12px;
+    left:0;
 
-color:#666;
+    bottom:0;
+
+    width:100%;
+
+    padding:18px 35px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    border-top:1px solid rgba(255,70,70,.25);
+
+    color:#777777;
+
+    letter-spacing:2px;
+
+}
+
+/* ===========================
+   スマホ
+=========================== */
+
+@media(max-width:700px){
+
+h1{
+
+    font-size:2rem;
+
+    letter-spacing:4px;
+
+}
+
+.titleArea{
+
+    gap:10px;
+
+}
+
+.bootLogo{
+
+    font-size:24px;
+
+}
+
+.progress{
+
+    width:240px;
+
+}
 
 }
