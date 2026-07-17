@@ -59,4 +59,53 @@ window.addEventListener("load", () => {
     setTimeout(nextStep, 600);
 
 });
+// =========================
+// items.json 読み込み
+// =========================
 
+let items = [];
+
+fetch("database/items.json")
+    .then(response => response.json())
+    .then(data => {
+
+        items = data;
+
+    });
+
+// =========================
+// 検索
+// =========================
+
+const searchBox = document.getElementById("searchBox");
+const result = document.getElementById("result");
+
+searchBox.addEventListener("keydown", function(e){
+
+    if(e.key !== "Enter") return;
+
+    const keyword = searchBox.value.trim();
+
+    const item = items.find(i => i.name === keyword);
+
+    if(!item){
+
+        result.innerHTML = "見つかりませんでした。";
+
+        return;
+
+    }
+
+    result.innerHTML = `
+        <h2>${item.name}</h2>
+
+        <p>${item.category}</p>
+
+        <h3>攻略のコツ</h3>
+
+        <ul>
+            ${item.tips.map(t=>`<li>${t}</li>`).join("")}
+        </ul>
+    `;
+
+});
