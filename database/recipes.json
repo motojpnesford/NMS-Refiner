@@ -1,1 +1,25 @@
-[]
+[
+  {
+    "id": "carbon_from_oxygen",
+
+    "result": {
+      "item": "carbon",
+      "amount": 2
+    },
+
+    "ingredients": [
+      {
+        "item": "oxygen",
+        "amount": 1
+      }
+    ],
+
+    "machine": "portable_refiner",
+
+    "time": 5,
+
+    "tips": [
+      "酸素が大量にある場合は炭素集めより効率が良い。"
+    ]
+  }
+]
