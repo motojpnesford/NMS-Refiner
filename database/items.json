@@ -2,7 +2,7 @@
 {
   "id": "carbon",
   "name": "炭素",
-  "icon": "carbon.png",
+  "icon": "carbon",
   "category": "基本資源",
 
   "obtain": [
@@ -22,6 +22,5 @@
     "燃料やクラフト素材として大量に使用する。"
   ],
 
-  "version": "Worlds Part II"
 }
 ]
