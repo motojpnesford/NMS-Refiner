@@ -1,8 +1,11 @@
-
 const boot = document.getElementById("boot");
 const bootText = document.getElementById("bootText");
 const progressBar = document.getElementById("progressBar");
 const main = document.getElementById("main");
+
+// =========================
+// 起動画面
+// =========================
 
 const steps = [
     { text: "INITIALIZING...", progress: 20 },
@@ -59,26 +62,29 @@ window.addEventListener("load", () => {
     setTimeout(nextStep, 600);
 
 });
+
 // =========================
-// items.json 読み込み
+// データベース
 // =========================
 
 let items = [];
+let recipes = [];
 
+// items.json
 fetch("database/items.json")
-    let recipes = [];
+    .then(response => response.json())
+    .then(data => {
 
+        items = data;
+
+    });
+
+// recipes.json
 fetch("database/recipes.json")
     .then(response => response.json())
     .then(data => {
 
         recipes = data;
-
-    });
-    .then(response => response.json())
-    .then(data => {
-
-        items = data;
 
     });
 
@@ -89,6 +95,15 @@ fetch("database/recipes.json")
 const searchBox = document.getElementById("searchBox");
 const result = document.getElementById("result");
 
+// id → 日本語名
+function getItemName(id){
+
+    const item = items.find(i => i.id === id);
+
+    return item ? item.name : id;
+
+}
+
 searchBox.addEventListener("keydown", function(e){
 
     if(e.key !== "Enter") return;
@@ -97,55 +112,18 @@ searchBox.addEventListener("keydown", function(e){
 
     const item = items.find(i => i.name === keyword);
 
-    const recipesFound = recipes.filter(r => r.result.item === item.id);
-    
     if(!item){
 
-        result.innerHTML = "見つかりませんでした。";
+        result.innerHTML = "<h2>見つかりませんでした。</h2>";
 
         return;
 
     }
 
-   result.innerHTML = `
-<h2>${item.name}</h2>
+    const recipesFound = recipes.filter(r => r.result.item === item.id);
 
-<p>${item.category}</p>
+    result.innerHTML = `
 
-<h3>攻略のコツ</h3>
-
-<ul>
-${item.tips.map(t=>`<li>${t}</li>`).join("")}
-</ul>
-
-<h3>入手方法</h3>
-
-<ul>
-${item.obtain.map(o=>`<li>${o}</li>`).join("")}
-</ul>
-
-<h3>増やし方</h3>
-
-${
-recipesFound.length
-?
-recipesFound.map(recipe=>`
-
-<p>
-
-${recipe.ingredients.map(i=>`${i.item} ×${i.amount}`).join(" + ")}
-
-↓
-
-${recipe.result.item} ×${recipe.result.amount}
-
-</p>
-
-`).join("")
-:
-"<p>ありません</p>"
-}
-`;
         <h2>${item.name}</h2>
 
         <p>${item.category}</p>
@@ -153,8 +131,37 @@ ${recipe.result.item} ×${recipe.result.amount}
         <h3>攻略のコツ</h3>
 
         <ul>
-            ${item.tips.map(t=>`<li>${t}</li>`).join("")}
+            ${item.tips.map(t => `<li>${t}</li>`).join("")}
         </ul>
+
+        <h3>入手方法</h3>
+
+        <ul>
+            ${item.obtain.map(o => `<li>${o}</li>`).join("")}
+        </ul>
+
+        <h3>増やし方</h3>
+
+        ${
+            recipesFound.length > 0
+            ?
+            recipesFound.map(recipe => `
+
+                <p>
+
+                ${recipe.ingredients.map(i => `${getItemName(i.item)} ×${i.amount}`).join(" + ")}
+
+                <br>↓<br>
+
+                ${getItemName(recipe.result.item)} ×${recipe.result.amount}
+
+                </p>
+
+            `).join("")
+            :
+            "<p>ありません。</p>"
+        }
+
     `;
 
 });
