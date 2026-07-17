@@ -61,5 +61,5 @@ window.addEventListener("load", () => {
 fetch("database.json")
   .then(response => response.json())
   .then(data => {
-    console.log(data);
+   alert(data[0].name);
   });
