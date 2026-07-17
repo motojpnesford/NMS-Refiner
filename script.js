@@ -58,3 +58,8 @@ window.addEventListener("load", () => {
     setTimeout(nextStep, 600);
 
 });
+fetch("database.json")
+  .then(response => response.json())
+  .then(data => {
+    console.log(data);
+  });
