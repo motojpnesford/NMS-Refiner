@@ -373,3 +373,36 @@ h1{
 }
 
 }
+/* ===========================
+   検索結果
+=========================== */
+
+#resultArea{
+
+    margin-top:40px;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+#result{
+
+    width:700px;
+
+    min-height:200px;
+
+    border:1px solid rgba(255,80,80,.3);
+
+    background:rgba(255,255,255,.03);
+
+    padding:25px;
+
+    color:#ddd;
+
+    line-height:1.8;
+
+    backdrop-filter:blur(4px);
+
+}
