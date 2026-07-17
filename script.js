@@ -66,6 +66,15 @@ window.addEventListener("load", () => {
 let items = [];
 
 fetch("database/items.json")
+    let recipes = [];
+
+fetch("database/recipes.json")
+    .then(response => response.json())
+    .then(data => {
+
+        recipes = data;
+
+    });
     .then(response => response.json())
     .then(data => {
 
@@ -88,6 +97,8 @@ searchBox.addEventListener("keydown", function(e){
 
     const item = items.find(i => i.name === keyword);
 
+    const recipesFound = recipes.filter(r => r.result.item === item.id);
+    
     if(!item){
 
         result.innerHTML = "見つかりませんでした。";
@@ -96,7 +107,45 @@ searchBox.addEventListener("keydown", function(e){
 
     }
 
-    result.innerHTML = `
+   result.innerHTML = `
+<h2>${item.name}</h2>
+
+<p>${item.category}</p>
+
+<h3>攻略のコツ</h3>
+
+<ul>
+${item.tips.map(t=>`<li>${t}</li>`).join("")}
+</ul>
+
+<h3>入手方法</h3>
+
+<ul>
+${item.obtain.map(o=>`<li>${o}</li>`).join("")}
+</ul>
+
+<h3>増やし方</h3>
+
+${
+recipesFound.length
+?
+recipesFound.map(recipe=>`
+
+<p>
+
+${recipe.ingredients.map(i=>`${i.item} ×${i.amount}`).join(" + ")}
+
+↓
+
+${recipe.result.item} ×${recipe.result.amount}
+
+</p>
+
+`).join("")
+:
+"<p>ありません</p>"
+}
+`;
         <h2>${item.name}</h2>
 
         <p>${item.category}</p>
