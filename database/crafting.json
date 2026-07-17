@@ -1,1 +1,23 @@
-[]
+[
+  {
+    "id": "metal_plate",
+
+    "result": {
+      "item": "metal_plate",
+      "amount": 1
+    },
+
+    "ingredients": [
+      {
+        "item": "ferrite_dust",
+        "amount": 50
+      }
+    ],
+
+    "machine": "inventory",
+
+    "tips": [
+      "建築で大量に使用するため、まとめて作成しておくと便利。"
+    ]
+  }
+]
