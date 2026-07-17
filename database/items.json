@@ -1,6 +1,8 @@
+[
 {
   "id": "carbon",
   "name": "炭素",
+  "icon": "carbon.png",
   "category": "基本資源",
 
   "obtain": [
@@ -22,3 +24,4 @@
 
   "version": "Worlds Part II"
 }
+]
