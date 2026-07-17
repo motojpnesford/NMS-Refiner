@@ -1,3 +1,4 @@
+alert("script.js 読み込み成功");
 const boot = document.getElementById("boot");
 const bootText = document.getElementById("bootText");
 const progressBar = document.getElementById("progressBar");
