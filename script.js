@@ -176,7 +176,7 @@ ${recipeForThisItem ? `
     </ul>
 
 ` : ""}
-        <h3>■ 入手方法</h3>
+        <h3>◆ ACQUISITION　■ 入手方法</h3>
 
         <ul>
 
@@ -184,7 +184,7 @@ ${recipeForThisItem ? `
 
         </ul>
 
-        <h3>■ 増やし方</h3>
+        <h3>◆ REFINING　■ 増やし方</h3>
 
         ${
             recipesFound.length
@@ -214,7 +214,7 @@ ${recipeForThisItem ? `
 
         }
 
-        <h3>■ 攻略のコツ</h3>
+        <h3>◆ TIPS　■ 攻略のコツ</h3>
 
         <ul>
 
@@ -222,7 +222,7 @@ ${recipeForThisItem ? `
 
         </ul>
 
-    <h3>■ メモ</h3>
+    <h3>◆ NOTES　■ メモ</h3>
 
 <ul>
 
@@ -230,7 +230,7 @@ ${item.notes ? item.notes.map(n=>`<li>${n}</li>`).join("") : "<li>なし</li>"}
 
 </ul>
 
-<h3>■ この資源から作れるもの</h3>
+<h3>◆ CRAFTING　■ この資源から作れるもの</h3>
 
 ${
 craftingFound.length
