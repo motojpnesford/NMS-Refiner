@@ -9,15 +9,15 @@
 
     "ingredients": [
       {
-        "item": "ferrite_dust",
-        "amount": 50
+        "item": "carbon",
+        "amount": 20
       }
     ],
 
-    "machine": "inventory",
+    "crafting": "inventory",
 
     "tips": [
-      "建築で大量に使用するため、まとめて作成しておくと便利。"
+      "※動作確認用サンプル"
     ]
   }
 ]
