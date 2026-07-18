@@ -141,6 +141,8 @@ body::after{
 
     min-height:100vh;
 
+    padding-bottom:120px;
+
 }
 /* ===========================
    上部バー
@@ -374,12 +376,12 @@ h1{
 
 }
 /* ===========================
-   検索結果
+   ATLAS DATA CARD
 =========================== */
 
 #resultArea{
 
-    margin-top:40px;
+    margin-top:45px;
 
     display:flex;
 
@@ -387,22 +389,132 @@ h1{
 
 }
 
-#result{
+#resultCard{
 
-    width:700px;
+    width:760px;
 
-    min-height:200px;
+    min-height:320px;
 
-    border:1px solid rgba(255,80,80,.3);
+    background:rgba(255,255,255,.04);
 
-    background:rgba(255,255,255,.03);
+    border:1px solid rgba(255,80,80,.35);
+
+    border-radius:8px;
+
+    backdrop-filter:blur(6px);
+
+    box-shadow:0 0 30px rgba(255,80,80,.10);
+
+    overflow:hidden;
+
+    animation:fadeCard .35s ease;
+
+}
+
+/* ---------- Header ---------- */
+
+#itemHeader{
 
     padding:25px;
 
-    color:#ddd;
+    text-align:center;
 
-    line-height:1.8;
+    border-bottom:1px solid rgba(255,80,80,.20);
 
-    backdrop-filter:blur(4px);
+}
+
+#itemHeader h2{
+
+    font-size:2.2rem;
+
+    color:#ffffff;
+
+    letter-spacing:6px;
+
+    margin-bottom:10px;
+
+    text-shadow:0 0 15px rgba(255,80,80,.4);
+
+}
+
+#itemHeader p{
+
+    color:#ff8080;
+
+    letter-spacing:3px;
+
+}
+
+/* ---------- Body ---------- */
+
+#itemBody{
+
+    padding:30px;
+
+    line-height:1.9;
+
+    color:#dddddd;
+
+}
+
+#itemBody h3{
+
+    margin-top:28px;
+
+    margin-bottom:10px;
+
+    color:#ff6666;
+
+    letter-spacing:2px;
+
+    border-left:3px solid #ff5555;
+
+    padding-left:10px;
+
+}
+
+#itemBody ul{
+
+    padding-left:25px;
+
+}
+
+#itemBody li{
+
+    margin-bottom:8px;
+
+}
+
+.resultMessage{
+
+    text-align:center;
+
+    color:#888;
+
+    margin-top:80px;
+
+    letter-spacing:2px;
+
+}
+
+/* ---------- アニメーション ---------- */
+
+@keyframes fadeCard{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(15px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
 
 }
