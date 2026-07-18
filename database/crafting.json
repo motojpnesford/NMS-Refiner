@@ -1,13 +1,15 @@
-{
-  "id": "metal_plate",
-  "result": {
-    "item": "metal_plate",
-    "amount": 1
-  },
-  "ingredients": [
-    {
-      "item": "carbon",
-      "amount": 20
-    }
-  ]
-}
+[
+  {
+    "id": "metal_plate",
+    "result": {
+      "item": "metal_plate",
+      "amount": 1
+    },
+    "ingredients": [
+      {
+        "item": "carbon",
+        "amount": 20
+      }
+    ]
+  }
+]
