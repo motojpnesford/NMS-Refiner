@@ -24,3 +24,8 @@ No Man's Sky Refiner Database
 ・database.json追加
 ・GitHub PagesからJSON読み込み成功
 ・JavaScriptによるデータ取得成功
+Ver.0.43
+・検索結果をATLASデータカード化
+・Header / Body構造へ変更
+・表示デザイン改善
+・今後のアイコン表示に対応
