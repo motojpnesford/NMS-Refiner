@@ -209,7 +209,13 @@ searchBox.addEventListener("keydown",function(e){
 
         </ul>
 
-        <h3>■ メモ</h3>
+    <h3>■ メモ</h3>
+
+<ul>
+
+${item.notes ? item.notes.map(n=>`<li>${n}</li>`).join("") : "<li>なし</li>"}
+
+</ul>
 
 <h3>■ この資源から作れるもの</h3>
 
