@@ -1,23 +1,13 @@
-[
-  {
-    "id": "metal_plate",
-
-    "result": {
-      "item": "metal_plate",
-      "amount": 1
-    },
-
-    "ingredients": [
-      {
-        "item": "carbon",
-        "amount": 20
-      }
-    ],
-
-    "crafting": "inventory",
-
-    "tips": [
-      "※動作確認用サンプル"
-    ]
-  }
-]
+{
+  "id": "metal_plate",
+  "result": {
+    "item": "metal_plate",
+    "amount": 1
+  },
+  "ingredients": [
+    {
+      "item": "carbon",
+      "amount": 20
+    }
+  ]
+}
