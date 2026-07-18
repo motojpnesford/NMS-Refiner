@@ -151,7 +151,9 @@ searchBox.addEventListener("keydown",function(e){
     const recipesFound = recipes.filter(r=>r.result.item===item.id);
     const craftingFound = crafting.filter(c =>
     c.ingredients.some(i => i.item === item.id)
+            
 );
+    const recipeForThisItem = crafting.find(c => c.result.item === item.id);
 
     itemHeader.innerHTML = `
 
@@ -163,6 +165,17 @@ searchBox.addEventListener("keydown",function(e){
 
     itemBody.innerHTML = `
 
+${recipeForThisItem ? `
+
+    <h3>◆ REQUIRED MATERIALS</h3>
+
+    <ul>
+
+        ${recipeForThisItem.ingredients.map(i => `<li>${getItemName(i.item)} ×${i.amount}</li>`).join("")}
+
+    </ul>
+
+` : ""}
         <h3>■ 入手方法</h3>
 
         <ul>
