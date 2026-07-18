@@ -243,12 +243,7 @@ ${getItemName(c.result.item)}
 "<p>ありません。</p>"
 
 }
-        <ul>
-
-            ${item.notes ? item.notes.map(n=>`<li>${n}</li>`).join("") : "<li>なし</li>"}
-
-        </ul>
-
+     
     `;
 
 });
