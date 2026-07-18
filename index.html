@@ -23,118 +23,100 @@
 <div id="background"></div>
 
 <!-- 起動画面 -->
-
 <div id="boot">
 
     <div class="bootLogo">
-
         ATLAS INTERFACE
-
     </div>
 
     <div id="bootText">
-
         INITIALIZING...
-
     </div>
 
     <div class="progress">
-
         <div id="progressBar"></div>
-
     </div>
 
 </div>
 
 <!-- メイン画面 -->
-
 <div id="main">
 
 <header>
 
-<div class="statusLeft">
+    <div class="statusLeft">
+        ATLAS NETWORK
+    </div>
 
-ATLAS NETWORK
-
-</div>
-
-<div class="statusRight">
-
-ONLINE
-
-</div>
+    <div class="statusRight">
+        ONLINE
+    </div>
 
 </header>
 
 <main>
 
-<div class="titleArea">
+    <!-- タイトル -->
+    <div class="titleArea">
 
-<div class="titleLine"></div>
+        <div class="titleLine"></div>
 
-<h1>
+        <h1>NMS REFINER</h1>
 
-NMS REFINER
-
-</h1>
-
-<div class="titleLine"></div>
-
-</div>
-
-<p class="subtitle">
-
-REFINING DATABASE
-
-</p>
-
-<section class="searchArea">
-
-<div class="searchLabel">
-
-RESOURCE INPUT
-
-</div>
-
-<input
-id="searchBox"
-type="text"
-placeholder="資源名を入力">
-
-</section>
-
-<section id="resultArea">
-
-    <div id="resultCard">
-
-        <div id="itemHeader"></div>
-
-        <div id="itemBody"></div>
+        <div class="titleLine"></div>
 
     </div>
 
-</section>
-<section class="welcome">
+    <p class="subtitle">
+        REFINING DATABASE
+    </p>
 
-WELCOME TRAVELLER
+    <!-- 検索 -->
+    <section class="searchArea">
 
-</section>
+        <div class="searchLabel">
+            RESOURCE INPUT
+        </div>
+
+        <input
+            id="searchBox"
+            type="text"
+            placeholder="資源名を入力">
+
+    </section>
+
+    <!-- 検索結果カード -->
+    <section id="resultArea">
+
+        <div id="resultCard">
+
+            <div id="itemHeader">
+                SEARCH RESULT
+            </div>
+
+            <div id="itemBody">
+
+                <p class="resultMessage">
+                    資源名を入力して Enter を押してください。
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
 
 </main>
 
 <footer>
 
-<div>
+    <div>
+        DATABASE READY
+    </div>
 
-DATABASE READY
-
-</div>
-
-<div>
-
-VERSION 0.3
-
-</div>
+    <div>
+        VERSION 0.43
+    </div>
 
 </footer>
 
@@ -143,5 +125,4 @@ VERSION 0.3
 <script src="script.js"></script>
 
 </body>
-
 </html>
