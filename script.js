@@ -76,16 +76,18 @@ window.addEventListener("load",()=>{
 
 let items = [];
 let recipes = [];
-
+let crafting = [];
 Promise.all([
 
     fetch("database/items.json").then(r=>r.json()),
-    fetch("database/recipes.json").then(r=>r.json())
+    fetch("database/recipes.json").then(r=>r.json()),
+    fetch("database/crafting.json").then(r=>r.json())
 
 ]).then(data=>{
 
     items = data[0];
     recipes = data[1];
+    crafting = data[2];
 
 });
 
@@ -147,6 +149,9 @@ searchBox.addEventListener("keydown",function(e){
     }
 
     const recipesFound = recipes.filter(r=>r.result.item===item.id);
+    const craftingFound = crafting.filter(c =>
+    c.ingredients.some(i => i.item === item.id)
+);
 
     itemHeader.innerHTML = `
 
@@ -206,6 +211,32 @@ searchBox.addEventListener("keydown",function(e){
 
         <h3>■ メモ</h3>
 
+<h3>■ この資源から作れるもの</h3>
+
+${
+craftingFound.length
+
+?
+
+`<ul>
+
+${craftingFound.map(c=>`
+
+<li>
+
+${getItemName(c.result.item)}
+
+</li>
+
+`).join("")}
+
+</ul>`
+
+:
+
+"<p>ありません。</p>"
+
+}
         <ul>
 
             ${item.notes ? item.notes.map(n=>`<li>${n}</li>`).join("") : "<li>なし</li>"}
