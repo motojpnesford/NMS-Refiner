@@ -157,15 +157,17 @@ searchBox.addEventListener("keydown",function(e){
 
 itemHeader.innerHTML = `
 
-    <div class="entryLabel">
+<div class="entryLabel">
 
-        ATLAS DATABASE ENTRY
+ATLAS DATABASE ENTRY
 
-    </div>
+</div>
 
-    <h2>${item.name}</h2>
+<div class="entryLine"></div>
 
-    <p>${getCategoryEnglish(item.category)}</p>
+<h2>${item.name}</h2>
+
+<p>${getCategoryEnglish(item.category)}</p>
 
 `;
     itemBody.innerHTML = `
