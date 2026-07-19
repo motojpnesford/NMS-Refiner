@@ -381,7 +381,7 @@ h1{
 
 #resultArea{
 
-    margin-top:45px;
+    margin-top:40px;
 
     display:flex;
 
@@ -415,7 +415,7 @@ h1{
 
 #itemHeader{
 
-    padding:25px;
+    padding:22px;
 
     text-align:center;
 
@@ -425,13 +425,13 @@ h1{
 
 #itemHeader h2{
 
-    font-size:2.2rem;
+    font-size:2rem;
 
     color:#ffffff;
 
-    letter-spacing:6px;
+    letter-spacing:5px;
 
-    margin-bottom:10px;
+    margin-bottom:8px;
 
     text-shadow:0 0 15px rgba(255,80,80,.4);
 
@@ -441,7 +441,9 @@ h1{
 
     color:#ff8080;
 
-    letter-spacing:3px;
+    letter-spacing:2px;
+
+    font-size:.9rem;
 
 }
 
@@ -449,27 +451,31 @@ h1{
 
 #itemBody{
 
-    padding:30px;
+    padding:24px;
 
-    line-height:1.9;
+    line-height:1.6;
 
     color:#dddddd;
+
+    font-size:.95rem;
 
 }
 
 #itemBody h3{
 
-    margin-top:28px;
+    margin-top:18px;
 
-    margin-bottom:10px;
+    margin-bottom:6px;
 
     color:#ff6666;
 
-    letter-spacing:2px;
+    font-size:.95rem;
+
+    letter-spacing:1px;
 
     border-left:3px solid #ff5555;
 
-    padding-left:10px;
+    padding-left:8px;
 
 }
 
@@ -479,26 +485,37 @@ h1{
 
     display:block;
 
-    font-size:0.62em;
+    font-size:.58em;
 
-    color:#888;
+    color:#777;
 
-    margin-top:4px;
+    margin-top:1px;
 
-    margin-left:18px;
+    margin-left:12px;
 
-    letter-spacing:1px;
+    letter-spacing:0;
+
+    font-family:'Zen Kaku Gothic New',sans-serif;
 
 }
+
 #itemBody ul{
 
-    padding-left:25px;
+    padding-left:18px;
+
+    margin-bottom:8px;
 
 }
 
 #itemBody li{
 
-    margin-bottom:8px;
+    margin-bottom:3px;
+
+}
+
+#itemBody p{
+
+    margin:4px 0;
 
 }
 
