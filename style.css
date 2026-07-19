@@ -415,25 +415,11 @@ h1{
 
 #itemHeader{
 
-    /* ---------- Entry Label ---------- */
+    padding:22px;
 
-.entryLabel{
+    text-align:center;
 
-    position:relative;
-
-    display:inline-block;
-
-    font-size:.72rem;
-
-    color:#888;
-
-    letter-spacing:5px;
-
-    text-transform:uppercase;
-
-    margin-bottom:16px;
-
-    opacity:.8;
+    border-bottom:1px solid rgba(255,80,80,.20);
 
 }
 
@@ -452,6 +438,7 @@ h1{
     opacity:.8;
 
 }
+
 #itemHeader h2{
 
     font-family:'Zen Kaku Gothic New',sans-serif;
