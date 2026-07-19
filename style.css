@@ -437,36 +437,19 @@ h1{
 
 }
 
-.entryLabel::before,
-.entryLabel::after{
+.entryLabel{
 
-    content:"";
+    font-size:0.72rem;
 
-    position:absolute;
+    color:#888;
 
-    top:50%;
+    letter-spacing:5px;
 
-    width:45px;
+    text-transform:uppercase;
 
-    height:1px;
+    margin-bottom:14px;
 
-    background:rgba(255,80,80,.4);
-
-}
-
-.entryLabel::before{
-
-    right:100%;
-
-    margin-right:12px;
-
-}
-
-.entryLabel::after{
-
-    left:100%;
-
-    margin-left:12px;
+    opacity:.8;
 
 }
 #itemHeader h2{
