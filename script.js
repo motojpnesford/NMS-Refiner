@@ -167,7 +167,8 @@ searchBox.addEventListener("keydown",function(e){
 
 ${recipeForThisItem ? `
 
-    <h3>◆ REQUIRED MATERIALS</h3>
+    <h3>◆ REQUIRED MATERIALS
+    <span class="jp">必要素材</span></h3>
 
     <ul>
 
