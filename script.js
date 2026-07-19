@@ -157,7 +157,7 @@ searchBox.addEventListener("keydown",function(e){
 
     itemHeader.innerHTML = `
 
-        <h2>◇ ${item.name} ◇</h2>
+        <h2> ${item.name} </h2>
 
         <p>${getCategoryEnglish(item.category)}</p>
 
