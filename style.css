@@ -1,24 +1,39 @@
+/* ==========================================================
+   NMS REFINER
+   style.css Ver.0.5
+========================================================== */
+
+
+/* ==========================================================
+   RESET
+========================================================== */
+
 *{
+
     margin:0;
     padding:0;
     box-sizing:border-box;
+
 }
 
-html,body{
+html,
+body{
 
     width:100%;
     height:100%;
 
     background:#050505;
+
     color:#ffffff;
 
     font-family:'Orbitron',sans-serif;
 
 }
 
-/* ===========================
-   背景
-=========================== */
+
+/* ==========================================================
+   BACKGROUND
+========================================================== */
 
 #background{
 
@@ -27,8 +42,11 @@ html,body{
     inset:0;
 
     background-image:url("background.png");
+
     background-size:cover;
+
     background-position:center;
+
     background-repeat:no-repeat;
 
     opacity:.12;
@@ -37,7 +55,10 @@ html,body{
 
 }
 
-/* スキャンライン */
+
+/* ==========================================================
+   SCAN LINE
+========================================================== */
 
 body::after{
 
@@ -47,12 +68,20 @@ body::after{
 
     inset:0;
 
-    background:repeating-linear-gradient(
+    background:
+
+    repeating-linear-gradient(
+
         to bottom,
+
         rgba(255,255,255,.02) 0px,
+
         rgba(255,255,255,.02) 1px,
+
         transparent 2px,
+
         transparent 4px
+
     );
 
     pointer-events:none;
@@ -61,13 +90,15 @@ body::after{
 
 }
 
-/* ===========================
-   起動画面
-=========================== */
+
+/* ==========================================================
+   BOOT SCREEN
+========================================================== */
 
 #boot{
 
     position:fixed;
+
     inset:0;
 
     display:flex;
@@ -83,6 +114,10 @@ body::after{
     z-index:100;
 
 }
+
+
+/* ---------- Logo ---------- */
+
 .bootLogo{
 
     color:#ff4040;
@@ -93,9 +128,14 @@ body::after{
 
     margin-bottom:40px;
 
-    text-shadow:0 0 12px rgba(255,80,80,.6);
+    text-shadow:
+
+        0 0 12px rgba(255,80,80,.6);
 
 }
+
+
+/* ---------- Boot Message ---------- */
 
 #bootText{
 
@@ -106,6 +146,9 @@ body::after{
     margin-bottom:20px;
 
 }
+
+
+/* ---------- Progress Bar ---------- */
 
 .progress{
 
@@ -127,9 +170,9 @@ body::after{
 
 }
 
-/* ===========================
-   メイン画面
-=========================== */
+/* ==========================================================
+   MAIN LAYOUT
+========================================================== */
 
 #main{
 
@@ -144,15 +187,19 @@ body::after{
     padding-bottom:120px;
 
 }
-/* ===========================
-   上部バー
-=========================== */
+
+
+/* ==========================================================
+   HEADER
+========================================================== */
 
 header{
 
     display:flex;
 
     justify-content:space-between;
+
+    align-items:center;
 
     padding:18px 35px;
 
@@ -166,15 +213,24 @@ header{
 
 }
 
+.statusLeft{
+
+    opacity:.75;
+
+}
+
 .statusRight{
 
     color:#58d9ff;
 
+    font-weight:600;
+
 }
 
-/* ===========================
-   中央
-=========================== */
+
+/* ==========================================================
+   MAIN CONTENT
+========================================================== */
 
 main{
 
@@ -186,7 +242,10 @@ main{
 
 }
 
-/* タイトル */
+
+/* ==========================================================
+   TITLE
+========================================================== */
 
 .titleArea{
 
@@ -221,7 +280,9 @@ h1{
     letter-spacing:8px;
 
     text-shadow:
+
         0 0 10px rgba(255,0,0,.4),
+
         0 0 20px rgba(255,0,0,.2);
 
 }
@@ -234,13 +295,14 @@ h1{
 
     letter-spacing:4px;
 
-    margin-bottom:80px;
+    margin-bottom:70px;
 
 }
 
-/* ===========================
-   検索
-=========================== */
+
+/* ==========================================================
+   SEARCH
+========================================================== */
 
 .searchArea{
 
@@ -254,9 +316,11 @@ h1{
 
     color:#ff7070;
 
-    margin-bottom:12px;
+    margin-bottom:10px;
 
     letter-spacing:3px;
+
+    font-size:.85rem;
 
 }
 
@@ -268,21 +332,23 @@ h1{
 
     border:none;
 
-    border-bottom:2px solid rgba(255,70,70,.5);
+    border-bottom:2px solid rgba(255,70,70,.45);
 
-    color:white;
+    color:#ffffff;
 
     padding:12px 4px;
 
-    font-size:1.2rem;
+    font-size:1.1rem;
 
-   font-family:'Orbitron',sans-serif;
+    font-family:'Zen Kaku Gothic New',sans-serif;
+
+    transition:.25s;
 
 }
 
 #searchBox::placeholder{
 
-    color:#666;
+    color:#666666;
 
 }
 
@@ -296,27 +362,29 @@ h1{
 
 }
 
-/* ===========================
-   Welcome
-=========================== */
+
+/* ==========================================================
+   WELCOME
+========================================================== */
 
 .welcome{
 
     text-align:center;
 
-    margin-top:100px;
+    margin-top:90px;
 
-    color:#dddddd;
+    color:#cccccc;
 
     letter-spacing:6px;
 
-    font-size:1.1rem;
+    font-size:1rem;
 
 }
 
-/* ===========================
-   下部
-=========================== */
+
+/* ==========================================================
+   FOOTER
+========================================================== */
 
 footer{
 
@@ -328,56 +396,31 @@ footer{
 
     width:100%;
 
-    padding:18px 35px;
-
     display:flex;
 
     justify-content:space-between;
 
+    align-items:center;
+
+    padding:18px 35px;
+
     border-top:1px solid rgba(255,70,70,.25);
+
+    background:rgba(5,5,5,.45);
+
+    backdrop-filter:blur(4px);
 
     color:#777777;
 
     letter-spacing:2px;
 
-}
-
-/* ===========================
-   スマホ
-=========================== */
-
-@media(max-width:700px){
-
-h1{
-
-    font-size:2rem;
-
-    letter-spacing:4px;
+    font-size:.85rem;
 
 }
 
-.titleArea{
-
-    gap:10px;
-
-}
-
-.bootLogo{
-
-    font-size:24px;
-
-}
-
-.progress{
-
-    width:240px;
-
-}
-
-}
-/* ===========================
+/* ==========================================================
    ATLAS DATA CARD
-=========================== */
+========================================================== */
 
 #resultArea{
 
@@ -411,7 +454,10 @@ h1{
 
 }
 
-/* ---------- Header ---------- */
+
+/* ==========================================================
+   CARD HEADER
+========================================================== */
 
 #itemHeader{
 
@@ -423,9 +469,12 @@ h1{
 
 }
 
+
+/* ---------- Entry Label ---------- */
+
 .entryLabel{
 
-    font-size:0.72rem;
+    font-size:.72rem;
 
     color:#888;
 
@@ -433,11 +482,29 @@ h1{
 
     text-transform:uppercase;
 
-    margin-bottom:14px;
+    margin-bottom:8px;
 
     opacity:.8;
 
 }
+
+
+/* ---------- Decorative Line ---------- */
+
+.entryLine{
+
+    width:180px;
+
+    height:1px;
+
+    margin:0 auto 18px;
+
+    background:rgba(255,80,80,.35);
+
+}
+
+
+/* ---------- Item Name ---------- */
 
 #itemHeader h2{
 
@@ -454,10 +521,15 @@ h1{
     margin-bottom:10px;
 
     text-shadow:
+
         0 0 8px rgba(255,255,255,.15),
+
         0 0 18px rgba(255,80,80,.35);
 
 }
+
+
+/* ---------- Category ---------- */
 
 #itemHeader p{
 
@@ -472,7 +544,11 @@ h1{
     opacity:.85;
 
 }
-/* ---------- Body ---------- */
+
+
+/* ==========================================================
+   CARD BODY
+========================================================== */
 
 #itemBody{
 
@@ -487,6 +563,10 @@ h1{
     font-family:'Zen Kaku Gothic New',sans-serif;
 
 }
+
+
+/* ---------- Section ---------- */
+
 #itemBody h3{
 
     margin-top:18px;
@@ -505,7 +585,8 @@ h1{
 
 }
 
-/* 日本語サブタイトル */
+
+/* ---------- Japanese Subtitle ---------- */
 
 #itemBody h3 .jp{
 
@@ -525,6 +606,9 @@ h1{
 
 }
 
+
+/* ---------- List ---------- */
+
 #itemBody ul{
 
     padding-left:18px;
@@ -539,11 +623,17 @@ h1{
 
 }
 
+
+/* ---------- Paragraph ---------- */
+
 #itemBody p{
 
     margin:4px 0;
 
 }
+
+
+/* ---------- Message ---------- */
 
 .resultMessage{
 
@@ -557,7 +647,10 @@ h1{
 
 }
 
-/* ---------- アニメーション ---------- */
+
+/* ==========================================================
+   ANIMATION
+========================================================== */
 
 @keyframes fadeCard{
 
@@ -574,6 +667,59 @@ h1{
         opacity:1;
 
         transform:translateY(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media(max-width:700px){
+
+    h1{
+
+        font-size:2rem;
+
+        letter-spacing:4px;
+
+    }
+
+    .titleArea{
+
+        gap:10px;
+
+    }
+
+    .bootLogo{
+
+        font-size:24px;
+
+    }
+
+    .progress{
+
+        width:240px;
+
+    }
+
+    #resultCard{
+
+        width:95%;
+
+    }
+
+    #itemHeader h2{
+
+        font-size:1.8rem;
+
+    }
+
+    #itemBody{
+
+        padding:18px;
 
     }
 
