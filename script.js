@@ -155,14 +155,19 @@ searchBox.addEventListener("keydown",function(e){
 );
     const recipeForThisItem = crafting.find(c => c.result.item === item.id);
 
-    itemHeader.innerHTML = `
+itemHeader.innerHTML = `
 
-        <h2> ${item.name} </h2>
+    <div class="entryLabel">
 
-        <p>${getCategoryEnglish(item.category)}</p>
+        ATLAS DATABASE ENTRY
 
-    `;
+    </div>
 
+    <h2>${item.name}</h2>
+
+    <p>${getCategoryEnglish(item.category)}</p>
+
+`;
     itemBody.innerHTML = `
 
 ${recipeForThisItem ? `
