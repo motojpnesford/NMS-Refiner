@@ -199,11 +199,11 @@ ${recipeForThisItem ? `
 
                 ${recipe.ingredients.map(i=>`${getItemName(i.item)} ×${i.amount}`).join(" + ")}
 
-                <br><br>
+                <br>
 
                 ↓
 
-                <br><br>
+                <br>
 
                 ${getItemName(recipe.result.item)} ×${recipe.result.amount}
 
