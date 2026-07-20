@@ -680,9 +680,9 @@ footer{
 
     display:block;
 
-    width:80px;
+    width:90px;
 
-    height:80px;
+    height:90px;
 
     object-fit:contain;
 
@@ -698,10 +698,12 @@ footer{
 
     align-items:center;
 
-    justify-content:center;
+   justify-content:flex-start;
 
     gap:20px;
 
+     padding:0 40px;
+   
     margin-top:20px;
 
 }
