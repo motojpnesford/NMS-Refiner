@@ -165,6 +165,8 @@ ATLAS DATABASE ENTRY
 
 <div class="entryLine"></div>
 
+<img src="images/icons/${item.icon}.png" class="itemIcon">
+
 <h2>${item.name}</h2>
 
 <p>${getCategoryEnglish(item.category)}</p>
