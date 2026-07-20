@@ -692,25 +692,61 @@ footer{
 
 }
 
-.headerTop{
+.headerInfo{
 
     display:flex;
 
     align-items:center;
 
-   justify-content:flex-start;
+    gap:18px;
 
-    gap:20px;
-
-     padding:0 40px;
-   
-    margin-top:20px;
+    padding:18px 28px 10px;
 
 }
 
-.titleBlock{
+.iconArea{
+
+    width:96px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-shrink:0;
+
+}
+
+.itemIcon{
+
+    width:82px;
+
+    height:82px;
+
+    object-fit:contain;
+
+    filter:drop-shadow(0 0 15px rgba(255,80,80,.35));
+
+}
+
+.titleAreaCard{
+
+    flex:1;
 
     text-align:left;
+
+}
+
+.titleAreaCard h2{
+
+    margin:0;
+
+}
+
+.titleAreaCard p{
+
+    margin-top:6px;
 
 }
 /* ==========================================================
