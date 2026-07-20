@@ -165,12 +165,19 @@ ATLAS DATABASE ENTRY
 
 <div class="entryLine"></div>
 
-<img src="images/icons/${item.icon}.png" class="itemIcon">
+<div class="headerTop">
 
-<h2>${item.name}</h2>
+    <img src="images/icons/${item.icon}.png" class="itemIcon">
 
-<p>${getCategoryEnglish(item.category)}</p>
+    <div class="titleBlock">
 
+        <h2>${item.name}</h2>
+
+        <p>${getCategoryEnglish(item.category)}</p>
+
+    </div>
+
+</div>
 `;
     itemBody.innerHTML = `
 
