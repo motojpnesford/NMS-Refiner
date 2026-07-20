@@ -165,11 +165,15 @@ ATLAS DATABASE ENTRY
 
 <div class="entryLine"></div>
 
-<div class="headerTop">
+<div class="headerInfo">
 
-    <img src="images/icons/${item.icon}.png" class="itemIcon">
+    <div class="iconArea">
 
-    <div class="titleBlock">
+        <img src="images/icons/${item.icon}.png" class="itemIcon">
+
+    </div>
+
+    <div class="titleAreaCard">
 
         <h2>${item.name}</h2>
 
