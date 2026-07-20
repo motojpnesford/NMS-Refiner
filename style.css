@@ -705,11 +705,9 @@ footer{
 }
 .iconArea{
 
-    width:96px;
-
     display:flex;
 
-    justify-content:center;
+   justify-content:flex-start;
 
     align-items:center;
 
