@@ -680,15 +680,35 @@ footer{
 
     display:block;
 
-    width:100px;
+    width:80px;
 
-    height:100px;
+    height:80px;
 
     object-fit:contain;
 
     margin:20px auto;
 
     filter:drop-shadow(0 0 15px rgba(255,80,80,.35));
+
+}
+
+.headerTop{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:20px;
+
+    margin-top:20px;
+
+}
+
+.titleBlock{
+
+    text-align:left;
 
 }
 /* ==========================================================
