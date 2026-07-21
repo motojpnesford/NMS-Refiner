@@ -694,27 +694,27 @@ footer{
 
 .headerInfo{
 
-    display:flex;
+    display:grid;
+
+　　 grid-template-columns:140px auto 140px;
 
     align-items:center;
 
-    gap:20px;
+    column-gap:20px;
 
-    padding:18px 35px 10px;
+    padding:22px 28px;
 
 }
+
 .iconArea{
 
     display:flex;
 
-   justify-content:flex-start;
+    justify-content:center;
 
     align-items:center;
 
-    flex-shrink:0;
-
 }
-
 .itemIcon{
 
     width:82px;
@@ -729,26 +729,29 @@ footer{
 
 .titleAreaCard{
 
-    flex:1;
-
     display:flex;
 
     flex-direction:column;
 
-    align-items:center;
-
     justify-content:center;
 
 }
+
 .titleAreaCard h2{
 
     margin:0;
+
+    font-size:2.5rem;
+
+    text-align:center;
 
 }
 
 .titleAreaCard p{
 
-    margin-top:6px;
+    margin-top:8px;
+
+    text-align:center;
 
 }
 /* ==========================================================
