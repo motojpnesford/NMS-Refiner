@@ -695,8 +695,8 @@ footer{
 .headerInfo{
 
     display:grid;
-
-　　 grid-template-columns:140px auto 140px;
+   
+    grid-template-columns:140px 1fr;
 
     align-items:center;
 
@@ -705,7 +705,6 @@ footer{
     padding:22px 28px;
 
 }
-
 .iconArea{
 
     display:flex;
@@ -734,6 +733,8 @@ footer{
     flex-direction:column;
 
     justify-content:center;
+
+    align-items:center;
 
 }
 
