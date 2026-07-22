@@ -694,15 +694,11 @@ footer{
 
 .headerInfo{
 
-    display:grid;
-   
-    grid-template-columns:140px 1fr;
+    position:relative;
 
-    align-items:center;
+    height:120px;
 
-    column-gap:10px;
-
-    padding:22px 28px;
+    padding:0 30px;
 
 }
 .iconArea{
