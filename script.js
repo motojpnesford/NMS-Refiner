@@ -169,11 +169,12 @@ ATLAS DATABASE ENTRY
 
     <div class="iconArea">
 
-        <img src="images/icons/${item.icon}.png" class="itemIcon">
+        <img src="images/icons/${item.icon}.png"
+             class="itemIcon">
 
     </div>
 
-    <div class="titleAreaCard">
+    <div class="titleCenter">
 
         <h2>${item.name}</h2>
 
