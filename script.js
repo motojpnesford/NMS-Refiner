@@ -286,4 +286,13 @@ ${getItemName(c.result.item)}
      
     `;
 
+    const blocks = itemBody.querySelectorAll("h3, ul, p");
+
+blocks.forEach((block, index) => {
+
+    block.classList.add("reveal");
+
+    block.style.animationDelay = `${index * 0.12}s`;
+
+});
 });
