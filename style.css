@@ -724,15 +724,17 @@ footer{
 
 }
 
-.titleAreaCard{
+.titleCenter{
 
-    display:flex;
+    position:absolute;
 
-    flex-direction:column;
+    left:50%;
 
-    justify-content:center;
+    top:50%;
 
-    align-items:center;
+    transform:translate(-50%,-50%);
+
+    text-align:center;
 
 }
 
