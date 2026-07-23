@@ -66,7 +66,7 @@ function showMainScreen(){
 
 window.addEventListener("load",()=>{
 
-    setTimeout(nextStep,600);
+    setTimeout(nextStep,900);
 
 });
 
