@@ -13,10 +13,10 @@ const itemBody = document.getElementById("itemBody");
 // =========================
 
 const steps = [
-    { text: "INITIALIZING...", progress: 8 },
-    { text: "CONNECTING TO ATLAS NETWORK...", progress: 32 },
-    { text: "VERIFYING DATABASE...", progress: 58 },
-    { text: "LOADING REFINER DATA...", progress: 83 },
+    { text: "INITIALIZING...", progress: 2 },
+    { text: "CONNECTING TO ATLAS NETWORK...", progress: 8 },
+    { text: "VERIFYING DATABASE...", progress: 15 },
+    { text: "LOADING REFINER DATA...", progress: 33 },
     { text: "WELCOME TRAVELLER", progress: 100 }
 ];
 
