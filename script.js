@@ -315,3 +315,4 @@ function decodeText(element, text){
     },60);
 
 }
+    });
