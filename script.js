@@ -286,3 +286,28 @@ ${getItemName(c.result.item)}
      
     `;
 
+function decodeText(element, text){
+
+    let index = 0;
+
+    const placeholder = "□";
+
+    const timer = setInterval(()=>{
+
+        element.textContent =
+            text.substring(0,index)
+            + placeholder.repeat(text.length-index);
+
+        index++;
+
+        if(index > text.length){
+
+            clearInterval(timer);
+
+            element.textContent = text;
+
+        }
+
+    },60);
+
+}
