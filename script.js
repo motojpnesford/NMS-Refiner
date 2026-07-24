@@ -176,7 +176,7 @@ ATLAS DATABASE ENTRY
 
     <div class="titleCenter">
 
-        <h2>${item.name}</h2>
+      <h2 id="itemTitle"></h2>
 
         <p>${getCategoryEnglish(item.category)}</p>
 
@@ -184,6 +184,10 @@ ATLAS DATABASE ENTRY
 
 </div>
 `;
+const title = document.getElementById("itemTitle");
+
+decodeText(title, item.name);
+    
     itemBody.innerHTML = `
 
 ${recipeForThisItem ? `
